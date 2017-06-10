@@ -173,7 +173,7 @@ class View(tk.Frame):
     def on_value_entry(self, event):
         """When a valid change to the entry is committed, request a view 
         refresh, and set focus on next entry widget."""
-        self.refresh(event)
+        self.refresh()
         self.set_next_focus(event.widget.tk_focusNext())
 
     def refresh(self):
