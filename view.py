@@ -8,7 +8,6 @@ Contains:
 """
 
 import matplotlib as mpl
-import numpy as np
 import tkinter as tk
 
 mpl.use("TkAgg")
