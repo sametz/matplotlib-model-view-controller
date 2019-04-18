@@ -13,7 +13,7 @@ import tkinter as tk
 
 mpl.use("TkAgg")
 from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
-                                               NavigationToolbar2Tk)
+                                               NavigationToolbar2Tk)  # NavigationToolbar2TkAgg was deprecated
 from tkinter import ttk
 
 
@@ -29,7 +29,9 @@ class MPLgraph(FigureCanvasTkAgg):
         FigureCanvasTkAgg.__init__(self, figure, parent, **options)
         self.figure = figure
         self.add = figure.add_subplot(111)
-        self.show()
+        # .show() was deprecated and changed to .draw(). See:
+        # https://github.com/matplotlib/matplotlib/pull/9275
+        self.draw()
         self.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
         self.toolbar = NavigationToolbar2Tk(self, parent)
         self.toolbar.update()
