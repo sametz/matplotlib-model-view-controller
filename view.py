@@ -163,7 +163,7 @@ class View(tk.Frame):
                         lambda event: self.on_value_entry(event))
         self.bind_class('TEntry', '<Tab>', lambda event: self.on_tab(event))
         self.bind_class('TEntry', '<FocusOut>',
-                        lambda event: self.refresh(event))
+                        lambda event: self.refresh())
 
     @staticmethod
     def on_focus_in(event):
