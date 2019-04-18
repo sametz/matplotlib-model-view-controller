@@ -13,7 +13,7 @@ import tkinter as tk
 
 mpl.use("TkAgg")
 from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg,
-                                               NavigationToolbar2TkAgg)
+                                               NavigationToolbar2Tk)
 from tkinter import ttk
 
 
@@ -31,7 +31,7 @@ class MPLgraph(FigureCanvasTkAgg):
         self.add = figure.add_subplot(111)
         self.show()
         self.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
-        self.toolbar = NavigationToolbar2TkAgg(self, parent)
+        self.toolbar = NavigationToolbar2Tk(self, parent)
         self.toolbar.update()
 
     def plot(self, x, y):
