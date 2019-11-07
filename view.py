@@ -46,7 +46,7 @@ class MPLgraph(FigureCanvasTkAgg):
         self.figure.canvas.draw()
 
 
-class View(tk.Frame):
+class View(ttk.Frame):
     """A tkinter GUI with two numerical entry boxes (labeled "base" and 
     "exponent"), and a matplotlib canvas. 
     
@@ -78,7 +78,7 @@ class View(tk.Frame):
             parent: parent widget
             controller: the object that provides the update_view method
         """
-        tk.Frame.__init__(self, parent, **options)
+        ttk.Frame.__init__(self, parent, **options)
         self.pack()
 
         self.parent = parent
